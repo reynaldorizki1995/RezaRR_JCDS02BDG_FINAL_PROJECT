@@ -1,0 +1,80 @@
+{% extends 'layout.html'%}
+
+<html>
+    <head>
+        
+    </head>
+    {% block body %}
+    <body>
+    
+    <div class="container pt 5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 mt-3">
+              <style>
+                .alert{
+                  background-color:green;
+                  padding: 1rem;
+                  border-radius: 10px;
+                  color: white;
+                  margin: 1rem;
+                }
+            </style>
+                <h3> Prediction Airbnb Berlin Price </h3>
+                <form action="/" method="POST">
+                    <!-- location -->
+                    <select class="form-control form-control-sm mt-2"  name="Location">
+                        <option value="" disabled selected>Select Neighbourhood</option>
+                        {% for item in data_location %}
+                            <option value="{{item}}">{{item}}</option>
+                        {% endfor %}
+                    </select>
+
+                    <select class="form-control form-control-sm mt-2"  name="Room">
+                        <option value="" disabled selected>Select Property Type</option>
+                            {% for item in data_property %}
+                                <option value="{{item}}">{{item}}</option>
+                            {% endfor %}
+                    </select>
+
+                    <!-- accommodates -->
+                    <input type="number" name='accommodates' max="20" min="1" placeholder="Number of Accommodates" class="form-control form-control-sm mt-2">
+
+                    <!-- bedrooms -->
+                    <input type="number" name='bedrooms' max="50" min="1" placeholder="Number of Bedrooms" class="form-control form-control-sm mt-2">
+
+                    <!-- Cleaning Fee-->
+                    <div class="input-group input-group-sm mt-2" >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-sm">$</span>
+                        </div>
+                        <input type="number" name="cleaning_fee" placeholder="Cleaning fee" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm mt-2">
+                      </div>
+                    
+                      <!-- Security Deposit -->
+                      <div class="input-group input-group-sm mt-2" >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-sm">$</span>
+                        </div>
+                        <input type="number" name="security_deposit" placeholder="Security Deposit" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm mt-2">
+                      </div>
+                    
+                    <!-- Guest Include -->
+                    <input type="number" name='guest_include', max="100000", min="0", placeholder="Guest Include" class="form-control form-control-sm mt-2">
+
+                    <!-- Minimum Nights -->
+                    <input type="number" name='minimum_nights', max="100000", min="0", placeholder="Minimum Night Stay" class="form-control form-control-sm mt-2">
+
+                    <!-- Button trigger modal -->
+                    <button type="submit" class="btn-success btn-info mt-4" data-toggle="modal" data-target="#hasil">Let's Predict</button>
+                    <div class="alert">
+                      ${{hasil_prediction}}
+                   </div>
+                </form>
+                
+                
+            </div>
+        </div>
+    </div>
+    {% endblock body %}
+    </body>
+</html>
