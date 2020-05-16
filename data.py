@@ -45,6 +45,14 @@ locations = ['Brunnenstr. Süd', 'Prenzlauer Berg Nordwest',
 
 property_type = ['Other', 'Apartment', 'House']
 
+room_type = ['Entire home/apt', 'Private room', 'Shared room']
+
+bed_type = ['Real Bed', 'Pull-out Sofa', 'Couch', 'Futon', 'Airbed']
+
+instant_bookable = ['f','t']
+
+cancellation_policy = ['strict', 'flexible', 'moderate']
+
 
 
 
