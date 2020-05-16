@@ -116,8 +116,8 @@ img{
         <!-- Full-width images with number and caption text -->
         <div class="mySlides">
             <div class="numbertext">1 / 11</div>
-            <img src="{{url_for('static',filename='image/1.png')}}" style="width:75%">
-            <div class="text"> </div>
+              <img src="{{url_for('static',filename='image/1.png')}}" style="width:75%">
+            <div class="text" id="data"> </div>
         </div>
         
         <div class="mySlides ">
@@ -173,6 +173,13 @@ img{
             <img src="{{url_for('static',filename='image/10.png')}}" style="width:75%">
             <div class="text"> </div>
         </div>
+
+        <div class="mySlides ">
+          <div class="numbertext">11 / 11</div>
+          <img src="{{url_for('static',filename='image/11.png')}}" style="width:75%">
+          <div class="text"> </div>
+      </div>
+        
         
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -194,6 +201,7 @@ img{
         <span class="dot" onclick="currentSlide(8)"></span> 
         <span class="dot" onclick="currentSlide(9)"></span> 
         <span class="dot" onclick="currentSlide(10)"></span> 
+        <span class="dot" onclick="currentSlide(11)"></span> 
     
     </div>
 </center>
