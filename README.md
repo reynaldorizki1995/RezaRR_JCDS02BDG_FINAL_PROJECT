@@ -151,7 +151,7 @@ This page is showing number of listing in each neighbourhood in berlin.
 # 5. Conclusion
 The best R2 score is 0.89 and the RMSE is 69.40 and such an RMSE value is a large enough value, which means, from this project there is still much that must be improved to reduce the value of RMSE, the smaller the RMSE value, the more accurate the prediction. things that might improve in this project are as follows:
 - Remove outliers, because there are still many hosts who post unreasonable prices. might be improve R2 score and reduce RMSE value
-- Try to do experiment with different model and hyperparameters.
+- Try to do some experiment with different model and hyperparameters.
 
 
 
