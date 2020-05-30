@@ -134,11 +134,11 @@ As you can see in the result above, the RMSE values of some models have increase
 After i do some experiment, next step i do is making a simple dashboard, This dashboard makes it easy for anyone who wants to start an airbnb business but is confused about pricing.
 Existing content on the dashboard are as follows:
 ## Home
-![](image/Home2.png)
+![](image/Home.png)
 
 ## Prediction
 You can fill the form to predict the price.
-![](image/Home.png)
+![](image/Home2.png)
 
 ## Visualization
 This page is showing like average price in each neighbourhood etc.
